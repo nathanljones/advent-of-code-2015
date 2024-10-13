@@ -1,10 +1,8 @@
-use std::result;
-
 use base16ct;
 use md5::{Digest, Md5};
 fn main() {
     let my_number = find_additional_hash_numbers("iwrupvqb");
-    println!("{my_number}");
+    println!("{my_number}")
 }
 fn find_additional_hash_numbers(secret_key: &str) -> u32 {
     let mut result: u32 = 0;
@@ -17,7 +15,7 @@ fn find_additional_hash_numbers(secret_key: &str) -> u32 {
         let hash = hasher.finalize();
         let mut buf = [0u8; 32];
         let res: &str = base16ct::lower::encode_str(&hash, &mut buf).unwrap();
-        if res.starts_with("000000") {
+        if res.starts_with("00000") {
             result = number_to_find;
             break;
         }

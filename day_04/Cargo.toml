@@ -5,5 +5,4 @@ edition = "2021"
 
 [dependencies]
 base16ct = "0.2.0"
-hex-literal = "0.4.1"
 md-5 = "0.10.6"
