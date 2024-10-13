@@ -1,5 +1,3 @@
-use std::iter::Sum;
-
 fn main() {
     let inputs = include_str!("input.txt");
 
